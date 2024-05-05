@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@keyframes wiggle {
+  0% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(-3deg);
+  }
+}
+
+@layer utilities {
+  .animate-wiggle {
+    animation: wiggle 1s infinite;
+  }
+}
+.circle-container {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+  transform: translate(-50%, -50%);
+}
+
+.circle-container:nth-child(1) {
+  transform: translate(-50%, -50%) rotate(0deg) translate(100px) rotate(0deg);
+}
+.circle-container:nth-child(2) {
+  transform: translate(-50%, -50%) rotate(60deg) translate(100px) rotate(-60deg);
+}
+.circle-container:nth-child(3) {
+  transform: translate(-50%, -50%) rotate(120deg) translate(100px)
+    rotate(-120deg);
+}
+.circle-container:nth-child(4) {
+  transform: translate(-50%, -50%) rotate(180deg) translate(100px)
+    rotate(-180deg);
+}
+.circle-container:nth-child(5) {
+  transform: translate(-50%, -50%) rotate(240deg) translate(100px)
+    rotate(-240deg);
+}
+.circle-container:nth-child(6) {
+  transform: translate(-50%, -50%) rotate(300deg) translate(100px)
+    rotate(-300deg);
+}
